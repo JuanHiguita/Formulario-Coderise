@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Amigos Peludos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <h1>Formulario de Adopcion</h1>
+      <!--boton para desplegar el formulario-->
+      <button id="Formulario">Acceder al Formulario</button>
+      <div id = "div_fechaSolicitud">
+        <!--inserte la fecha en la cual se expende el formulario-->
+        <label id="fecha_solicitud">Fecha de solicitud</label>
+        <input type="date" name=fecha_solicitud id="date-Fecha">
+      </div>
+    </header>
+    <section id="campos_formulario">
+      <form action="post" >
+        <div>
+          <!--inserte el nombre completo-->
+          <label>Nombre Completo</label>
+          <br/>
+          <input type="text" name="nombre" id="txt-name">
+        </div>
+        <br/>
+        <div>
+          <!--inserte un correo electronico valido-->
+          <label>Correo Electronico</label>
+          <br/>
+          <input type="email" name="Correo" id="email-correo">
+        </div>
+        <br/>
+        <div>
+          <!--inserte una fecha de nacimiento valida-->
+          <label>Fecha De Nacimiento</label>
+          <br/>
+          <input type="date" name="fecha_nacimiento" id="date-nacimiento">
+        </div>
+        <br/>
+        <div>
+          <!--inserte un numero de telefono valido-->
+          <label>Telefono</label>
+          <br/>
+          <input type="text" name="telefono" id="text-telefono">
+        </div>
+        <br/>
+        <div>
+          <!--selecciona un departamento-->
+          <label>Departamento</label>
+          <select name="Departamento" id="departamentos">
+            <option value="seleccion">Selecciona un Departamento</option>
+          </select>
+          <label>Ciudad</label>
+          <select name="Ciudad" id="ciudades">
+            <option value="seleccion-c">Selecciona una Ciudad</option>
+          </select>
+          <br/>
+          <!--inserte una direccion valida-->
+          <label>Dirección</label>
+          <br/>
+          <input type="text" name="direccion" id="text-direccion">
+        </div>
+        <br/>
+        <div>
+          <!--inserte la cantidad de personas que viven en el domicilio-->
+          <label>Numero de integrantes del domicilio</label>
+          <br/>
+          <input type="text" name="#dePersonas" id="text-integrantes">
+        </div>
+        <br/>
+        <!--Selecciona el genero-->
+        <div>
+          <label>Seleccione su genero:</label>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio-Masculino" value="option1">
+            <label class="form-check-label" for="inlineRadio-Masculino">Masculino</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio-Femenino" value="option2">
+            <label class="form-check-label" for="inlineRadio-Femenino">Femenino</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio-otro" value="option3">
+            <label class="form-check-label" for="inlineRadio-otro">Otro</label>
+          </div>
+        </div>
+        <br/>
+        <!--seleccione el tipo de domicilio, en caso de ser otro especifique-->
+        <div>
+          <label>Seleccione el tipo de domicilio:</label>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio-domicilioC" value="option1">
+            <label class="form-check-label" for="inlineRadio-domicilioC">Casa</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio-domicilioA" value="option2">
+            <label class="form-check-label" for="inlineRadio-domicilioA">Apartamento</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio-domicilioF" value="option3">
+            <label class="form-check-label" for="inlineRadio-domicilioF">Finca</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio-domicilioO" value="option4">
+            <label class="form-check-label" for="inlineRadio-domicilioO">Otro</label>
+          </div>
+          <br/>
+          <label>Especifique "otro"</label>
+          <br/>
+          <input type="text" name="otro" id="text-otro">
+        </div>
+        <br/>
+        <!--preguntas abiertas para el usuario-->
+        <div>
+          <label>Por que quieres adoptar una mascota?</label>
+          <br/>
+          <input type="text" name="pregunta1" id="text-pregunta1">
+        </div>
+        <br/>
+        <div>
+          <label>Tienes experiencia con los animales?</label>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio-experienciaS" value="option1">
+            <label class="form-check-label" for="inlineRadio-experienciaS">Si</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio-experienciaN" value="option2">
+            <label class="form-check-label" for="inlineRadio-experienciaN">No</label>
+          </div>
+        </div>
+        <br/>
+        <div>
+          <label>Tienes otras mascotas?</label>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio-mascotasS" value="option1">
+            <label class="form-check-label" for="inlineRadio-mascotasS">Si</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio-mascotasN" value="option2">
+            <label class="form-check-label" for="inlineRadio-mascotasN">No</label>
+          </div>
+        </div>
+        <br/>
+        <div>
+          <label>Cuales son tus ingresos mensuales?</label>
+          <br/>
+          <input type="text" name="pregunta2" id="text-pregunta2">
+        </div>
+        <br/>
+        <div>
+          <label>Cuantos ingresos dispones para tu mascota?</label>
+          <br/>
+          <input type="text" name="pregunta3" id="text-pregunta3">
+        </div>
+        <br/>
+        <div>
+          <label>Cuanto tiempo piensas dedicarle a tu mascota?</label>
+          <br/>
+          <input type="text" name="pregunta4" id="text-pregunta4">
+        </div>
+        <br/>
+        <div>
+          <label>En caso de estar ausente por un largo tiempo, quien cuidara de tu mascota?</label>
+          <br/>
+          <input type="text" name="pregunta5" id="text-pregunta5">
+        </div>
+        <br/>
+
+      </form>
+    </section>
+    <!--Boton encargado de guardar la informacion ingresada por el usuario-->
+      <button id="guardar">Guardar</button>
+    <!--boton para recuperar la informacion de la base de datos -->
+      <button id="login">Boton de respuestas</button>
+    <footer>
+      <!--importamos las librerias-->
+      <script src="/js/jquery-3.3.1.min.js"></script>
+      <script src="/js/main.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    </footer>
+  </body>
+</html>
