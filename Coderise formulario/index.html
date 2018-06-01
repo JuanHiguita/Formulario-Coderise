@@ -51,11 +51,11 @@
           <!--selecciona un departamento-->
           <label>Departamento</label>
           <select name="Departamento" id="departamentos">
-            <option value="seleccion">Selecciona un Departamento</option>
+            <option value="seleccion" id="o">Selecciona un Departamento</option>
           </select>
           <label>Ciudad</label>
           <select name="Ciudad" id="ciudades">
-            <option value="seleccion-c">Selecciona una Ciudad</option>
+            <option value="seleccion-c" id="e">Selecciona una Ciudad</option>
           </select>
           <br/>
           <!--inserte una direccion valida-->
@@ -72,18 +72,18 @@
         </div>
         <br/>
         <!--Selecciona el genero-->
-        <div>
+        <div id="genero">
           <label>Seleccione su genero:</label>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio-Masculino" value="option1">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio-genero" value="option1">
             <label class="form-check-label" for="inlineRadio-Masculino">Masculino</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio-Femenino" value="option2">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio-genero" value="option2">
             <label class="form-check-label" for="inlineRadio-Femenino">Femenino</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio-otro" value="option3">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio-genero" value="option3">
             <label class="form-check-label" for="inlineRadio-otro">Otro</label>
           </div>
         </div>
@@ -92,19 +92,19 @@
         <div>
           <label>Seleccione el tipo de domicilio:</label>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio-domicilioC" value="option1">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio-domicilio" value="option1">
             <label class="form-check-label" for="inlineRadio-domicilioC">Casa</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio-domicilioA" value="option2">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio-domicilio" value="option2">
             <label class="form-check-label" for="inlineRadio-domicilioA">Apartamento</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio-domicilioF" value="option3">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio-domicilio" value="option3">
             <label class="form-check-label" for="inlineRadio-domicilioF">Finca</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio-domicilioO" value="option4">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio-domicilio" value="option4">
             <label class="form-check-label" for="inlineRadio-domicilioO">Otro</label>
           </div>
           <br/>
@@ -123,11 +123,11 @@
         <div>
           <label>Tienes experiencia con los animales?</label>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio-experienciaS" value="option1">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio-experiencia" value="option1">
             <label class="form-check-label" for="inlineRadio-experienciaS">Si</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio-experienciaN" value="option2">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio-experiencia" value="option2">
             <label class="form-check-label" for="inlineRadio-experienciaN">No</label>
           </div>
         </div>
@@ -135,11 +135,11 @@
         <div>
           <label>Tienes otras mascotas?</label>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio-mascotasS" value="option1">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio-mascotas" value="option1">
             <label class="form-check-label" for="inlineRadio-mascotasS">Si</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio-mascotasN" value="option2">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio-mascotas" value="option2">
             <label class="form-check-label" for="inlineRadio-mascotasN">No</label>
           </div>
         </div>
@@ -181,6 +181,20 @@
       <script src="/js/main.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+      <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+      <script>
+        // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyDpCeRJcHVVhTBK0HTkJMUTVXvGJnJ1A1A",
+        authDomain: "amigos-peludos.firebaseapp.com",
+        databaseURL: "https://amigos-peludos.firebaseio.com",
+        projectId: "amigos-peludos",
+        storageBucket: "amigos-peludos.appspot.com",
+        messagingSenderId: "892086692674"
+          };
+      firebase.initializeApp(config);
+      </script>
     </footer>
   </body>
 </html>

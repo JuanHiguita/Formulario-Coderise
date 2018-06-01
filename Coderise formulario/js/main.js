@@ -1,26 +1,37 @@
+//--> linea 2 a 4 se ocultan los componentes que no queremos ver en la pagina principal
 $('#campos_formulario').hide();
 $('#div_fechaSolicitud').hide();
 $('#guardar').hide();
+//le decimos al programa que al hacer click nos muestre los campos que habiamos ocultado y que oculte los de la pagina principal
 $('#Formulario').click(function(){
-
     $('#Formulario').hide(),
     $('#login').hide(),
     $('#campos_formulario').show(),
+    $('#div_fechaSolicitud').show(),
     $('#guardar').show();
-
 });
 
-
-
-
-
-
-
-
-
-
-
-
+//escribir en la base de datos 
+$('#guardar').click(function(){
+var datos_form= {
+        nombre:$('#txt-name').val(),
+        fecha_nacimiento:$('#date-nacimiento').val(),
+        genero:$('#genero').val(),
+        email:$('#email-correo').val(),
+        telefono:$('#txt-telefono').val(),
+        departamento:$('#departamentos').val(),
+        ciudad:$('#ciudades').val(),
+        tipo_domicilio:$('#inlineRadio-domicilio').val(),
+        direccion:$('#txt-direccion').val(),
+        ingresos:$('#txt-pregunta2').val(),
+        ingresos_mascota:$('#txt-pregunta3').val(),
+        experiencia:$('#inlineRadio-experiencia').val(),
+        tiempo_mascota:$('#text-pregunta4').val(),  
+   };
+   console.log(datos_form);
+   firebase.database().ref('/datos_usuario')
+   .push(datos_form);
+});
 
 
 
