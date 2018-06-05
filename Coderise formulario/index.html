@@ -71,22 +71,26 @@
           </div>
         </div>
         <br/>
-        <div>
+        <div class="row">
+         <div class="col">
           <!--selecciona un departamento-->
           <label>Departamento</label>
-          <select name="Departamento" id="departamentos">
+          <select class="form-control" name="Departamento" id="departamentos">
             <option value="seleccion-d" id="o">Selecciona un Departamento</option>
           </select>
+         </div>
+         <div class="col">
           <label>Ciudad</label>
-          <select name="Ciudad" id="ciudades">
+          <select class="form-control" name="Ciudad" id="ciudades">
             <option value="seleccion-c" id="e">Selecciona una Ciudad</option>
           </select>
+         </div>
+        </div>
           <br/>
           <!--inserte una direccion valida-->
           <label>Dirección</label>
           <br/>
-          <input type="text" name="direccion" id="text-direccion" placeholder="Cra 22 #22c -22" required/>
-        </div>
+          <input type="text" class="form-control" name="direccion" id="text-direccion" placeholder="Cra 22 #22c -22" required/>
         <br/>
         <!--seleccione el tipo de domicilio, en caso de ser otro especifique-->
         <div>
@@ -111,25 +115,28 @@
           <div id="text-otro">
           <label>Especifique "otro"</label>
           <br/>
-          <input type="text" name="otro">
+          <input type="text" class="form-control" name="otro">
           </div>
         </div>
         <br/>
-        <div>
+        <div class="row">
+         <div class="col">
           <!--inserte la cantidad de personas que viven en el domicilio-->
           <label>Numero de integrantes del domicilio</label>
           <br/>
-          <input type="text" name="#dePersonas" id="text-integrantes" required/>
-        </div>
+          <input type="text" class="form-control" name="#dePersonas" id="text-integrantes" required/>
+         </div>
         <br/>
         <!--preguntas abiertas para el usuario-->
-        <div>
+         <div class="col">
           <label>¿Por qué quieres adoptar una mascota?</label>
           <br/>
-          <input type="text" name="pregunta1" id="text-pregunta1" required/>
+          <input type="text" class="form-control" name="pregunta1" id="text-pregunta1" required/>
+         </div>
         </div>
         <br/>
-        <div>
+        <div class="row">
+         <div class="col">
           <label>¿Tienes experiencia con los animales?</label>
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio-experiencia" value="Si">
@@ -139,9 +146,9 @@
             <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio-experiencia" value="No">
             <label class="form-check-label" for="inlineRadio-experienciaN">No</label>
           </div>
-        </div>
+         </div>
         <br/>
-        <div>
+         <div class="col">
           <label>¿Tienes otras mascotas?</label>
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio-mascotas" value="Si">
@@ -151,41 +158,48 @@
             <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio-mascotas" value="No">
             <label class="form-check-label" for="inlineRadio-mascotasN">No</label>
           </div>
+         </div>
         </div>
         <br/>
-        <div>
+        <div class="row">
+         <div class="col">
           <label>¿Cuáles son tus ingresos mensuales?</label>
           <br/>
-          <input type="text" name="pregunta2" id="text-pregunta2" placeholder="$500.000" required/>
-        </div>
+          <input type="text" class="form-control" name="pregunta2" id="text-pregunta2" placeholder="$500.000" required/>
+         </div>
         <br/>
-        <div>
+         <div class="col">
           <label>¿Cuántos ingresos dispones para tu mascota?</label>
           <br/>
-          <input type="text" name="pregunta3" id="text-pregunta3" placeholder="$200.000" required/>
+          <input type="text" class="form-control" name="pregunta3" id="text-pregunta3" placeholder="$200.000" required/>
+         </div>
         </div>
         <br/>
-        <div>
+        <div class="row">
+         <div class="col">
           <label>¿Cuánto tiempo piensas dedicarle a tu mascota?</label>
           <br/>
-          <input type="text" name="pregunta4" id="text-pregunta4" required/>
-        </div>
+          <input type="text" class="form-control" name="pregunta4" id="text-pregunta4" required/>
+         </div>
         <br/>
-        <div>
-          <label>En caso de estar ausente por un largo tiempo, ¿quién cuidará de tu mascota?</label>
+         <div class="col">
+          <label>En caso de estar ausente por un tiempo, ¿quién cuidará de tu mascota?</label>
           <br/>
-          <input type="text" name="pregunta5" id="text-pregunta5" required>
+          <input type="text" class="form-control" name="pregunta5" id="text-pregunta5" required>
+         </div>
         </div>
         <br/>
       </form>
     </section>
+    <div class="card-footer">
+    <!--Boton encargado de guardar la informacion ingresada por el usuario-->
+      <button type="submit" class="btn btn-primary" id="guardar">Guardar</button>
+    <!--boton para recuperar la informacion de la base de datos -->
+      <button type="submit" class="btn btn-primary" id="login">Boton de respuestas</button>
+    </div>
    </div> <!--div class="card"-->
    </div> <!--div class="card-body"-->
   </div>  <!--div class="container"-->
-    <!--Boton encargado de guardar la informacion ingresada por el usuario-->
-      <button id="guardar">Guardar</button>
-    <!--boton para recuperar la informacion de la base de datos -->
-      <button id="login">Boton de respuestas</button>
     <footer>
       <!--importamos las librerias-->
       <script src="/js/jquery-3.3.1.min.js"></script>
