@@ -1,15 +1,17 @@
 //--> linea 2 a 4 se ocultan los componentes que no queremos ver en la pagina principal
 $('#campos_formulario').hide();
-$('#div_fechaSolicitud').hide();
+$('#div_FS').hide();
 $('#guardar').hide();
+$('#container').hide();
 //le decimos al programa que al hacer click nos muestre los campos que habiamos ocultado y que oculte los de la pagina principal
 $('#Formulario').click(function(){
     $('#Formulario').hide(),
     $('#text-otro').hide(),
     $('#login').hide(),
     $('#campos_formulario').show(),
-    $('#div_fechaSolicitud').show(),
-    $('#guardar').show();
+    $('#div_FS').show(),
+    $('#guardar').show(),
+    $('#container').show();
 
 });
 
