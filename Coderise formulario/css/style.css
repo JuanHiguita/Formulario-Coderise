@@ -1,4 +1,10 @@
+header {
+	background-image: url(/img/img1.jpg);
+}
+
 h1 {
  font-family: 'Dancing Script', cursive;
  text-align: center;
 }
+
+

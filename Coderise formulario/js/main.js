@@ -3,6 +3,7 @@ $('#campos_formulario').hide();
 $('#div_FS').hide();
 $('#guardar').hide();
 $('#container').hide();
+$('#login').hide();
 //le decimos al programa que al hacer click nos muestre los campos que habiamos ocultado y que oculte los de la pagina principal
 $('#Formulario').click(function(){
     $('#Formulario').hide(),
@@ -20,7 +21,7 @@ function validar(){
  y que se convertirá en false(falso) cuando la condición no se cumpla
 */
     var correcto = true;
-    var mensaje = "Debes de corregir los siguientes errores: \n";
+    var mensaje = "Debes de corregir los siguientes errores: \n"; 
     /*
     ahora revisaremos que los parametros pedidos al usuario se cumplan y de no ser asi la variable
     creada anteriormente cambiara su valor a "false"(falso), en este caso decimos que si el nombre
@@ -40,7 +41,7 @@ function validar(){
     */ 
     if(isNaN($('#text-pregunta2').val())){
         correcto = false;
-        mensaje += "--> La respuesta insertada no es valida \n";
+        mensaje += "--> La respuesta insertada en la pregunta 'ingresos mensuales' no es valida \n";
     }
     if(isNaN($('#text-telefono').val())){
         correcto = false;
@@ -48,11 +49,11 @@ function validar(){
     }
     if(isNaN($('#text-pregunta3').val())){
         correcto = false;
-        mensaje += "--> La respuesta insertada no es valida \n";
+        mensaje += "--> La respuesta insertada en la pregunta 'cuanto dispones para tu mascota' no es valida \n";
     }
     if(isNaN($('#text-pregunta4').val())){
         correcto = false;
-        mensaje += "--> La respuesta insertada no es valida \n";
+        mensaje += "--> La respuesta insertada en la pregunta 'cuanto tiempo dispones para tu mascota' no es valida \n";
     }
     /*Para comprobar el email haremos uso de una expresión regular. Esto es una secuencia
     de caracteres que nos dirá si el valor ingresado por el usuario tiene estructura de
@@ -85,18 +86,20 @@ function validar(){
     if(!correcto){
     alert(mensaje);
     }
+
+    
     /*creamos un condicional en el cual si el valor de "correcto" es true nos permita 
     guardar la informacion que luego mandaremos a la base de datos*/
     if (correcto == true){    
     var datos_form= {
         nombre:$('#txt-name').val(),
         fecha_nacimiento:$('#date-nacimiento').val(),
-        genero:$('#genero').val(),
+        
         email:$('#email-correo').val(),
         telefono:$('#text-telefono').val(),
         departamento:$('#departamentos').val(),
         ciudad:$('#ciudades').val(),
-        tipo_domicilio:$('#tipo-domicilio').val(),
+        
         direccion:$('#text-direccion').val(), 
         ingresos:$('#text-pregunta2').val(),
         ingresos_mascota:$('#text-pregunta3').val(),
@@ -104,7 +107,7 @@ function validar(){
         tiempo_mascota:$('#text-pregunta4').val(),  
         };
         console.log(datos_form);
-        firebase.database().ref('/datos_usuario')
+        firebase.database().ref('datos_usuario')
         .push(datos_form);
     }
 
@@ -113,6 +116,27 @@ function validar(){
 //le indicamos al codigo que cuando se oprima el boton "guardar" ejecute la funcion "validar"
 $('#guardar').click(function(){
     validar();
+    var recomendacion = 0;
+    if ($('#text-pregunta2').val()>=500000){
+        recomendacion+=1;
+    }
+    if ($('#text-pregunta3').val()>=200000){
+        recomendacion+=1;
+    }
+    if ($('#text-pregunta4').val()>=6){
+        recomendacion+=1;
+    }
+
+    if (recomendacion >= 3){
+        alert("Te recomendamos un perro");
+    }
+    else if(recomendacion ==2){
+        alert("Te recomendamos un gato");
+    }
+    else if(recomendacion == 1){
+        alert("Te recomendamos un peluche");
+    }
+
 });
 
 
