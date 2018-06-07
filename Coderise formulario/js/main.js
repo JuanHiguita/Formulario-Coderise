@@ -12,7 +12,8 @@ $('#Formulario').click(function(){
     $('#campos_formulario').show(),
     $('#div_FS').show(),
     $('#guardar').show(),
-    $('#container').show();
+    $('#container').show(),
+    $('header').css('margin-top','1rem');
 
 });
 
